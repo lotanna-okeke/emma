@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/lotannaokeke/Documents/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/lotannaokeke/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/lotannaokeke/Documents/Post Uni/BlueTag/Work/Pre-push/SmartTransportMobileApp/android/app/.cxx/Debug/op3e4t6p/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/lotannaokeke/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/lotannaokeke/Documents/Post Uni/BlueTag/Work/Pre-push/SmartTransportMobileApp/android/app/.cxx/Debug/op3e4t6p/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

@@ -1,0 +1,87 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+// Load local properties
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+// Get Flutter SDK path
+// def flutterRoot = localProperties.getProperty('flutter.sdk')
+// if (flutterRoot == null) {
+//     throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+// }
+
+// Auto-increment version code and generate version name based on date
+def versionCodeFile = rootProject.file("version.properties")
+def versionProps = new Properties()
+if (versionCodeFile.exists()) {
+    versionCodeFile.withReader('UTF-8') { reader ->
+        versionProps.load(reader)
+    }
+}
+
+def flutterVersionCode = (versionProps.getProperty('versionCode')?.toInteger() ?: 1) + 1
+versionProps.setProperty('versionCode', flutterVersionCode.toString())
+
+def flutterVersionName = "1.${flutterVersionCode}"
+versionProps.setProperty('versionName', flutterVersionName)
+
+// Save updated version properties
+versionCodeFile.withWriter('UTF-8') { writer ->
+    versionProps.store(writer, null)
+}
+
+// apply plugin: 'com.android.application'
+// apply plugin: 'kotlin-android'
+// apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    namespace "com.bluetagit.strag"
+    compileSdkVersion 35
+    ndkVersion "27.0.12077973"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.bluetagit.strag"
+        minSdkVersion 24
+        targetSdkVersion 35
+        versionCode flutterVersionCode
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+    
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

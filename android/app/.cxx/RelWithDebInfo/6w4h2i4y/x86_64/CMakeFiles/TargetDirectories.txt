@@ -1,0 +1,2 @@
+/Users/lotannaokeke/Documents/Post Uni/BlueTag/Work/Strag/Pull and fix/SmartTransportMobileApp/android/app/.cxx/RelWithDebInfo/6w4h2i4y/x86_64/CMakeFiles/edit_cache.dir
+/Users/lotannaokeke/Documents/Post Uni/BlueTag/Work/Strag/Pull and fix/SmartTransportMobileApp/android/app/.cxx/RelWithDebInfo/6w4h2i4y/x86_64/CMakeFiles/rebuild_cache.dir

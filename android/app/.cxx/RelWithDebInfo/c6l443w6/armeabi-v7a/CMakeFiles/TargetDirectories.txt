@@ -1,0 +1,2 @@
+/Users/lotannaokeke/Documents/Post Uni/BlueTag/Work/Strag/Pull and fix/SmartTransportMobileApp/android/app/.cxx/RelWithDebInfo/c6l443w6/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/lotannaokeke/Documents/Post Uni/BlueTag/Work/Strag/Pull and fix/SmartTransportMobileApp/android/app/.cxx/RelWithDebInfo/c6l443w6/armeabi-v7a/CMakeFiles/rebuild_cache.dir
